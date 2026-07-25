@@ -51,8 +51,11 @@
     border-radius: 4px;
     object-fit: cover;
     width: 100%;
-   height: 100%;
+    height: 100%;
   }
+  .story .photo{ aspect-ratio: 4/5; }
+  .gallery-grid .photo{ aspect-ratio: 1/1; }
+  .gallery-grid .photo.tall{ aspect-ratio: 1/2.08; grid-row: span 2; }
 
 
   /* ---------- header ---------- */
@@ -288,13 +291,14 @@
   }
   @media (max-width: 860px){
     .nav-links, .nav-cta{ display:none; }
+    #mobile-menu .nav-cta{ display:inline-block; }
     .burger{ display:flex; }
     .story{ grid-template-columns: 1fr; }
-    .story .ph{ order:-1; aspect-ratio: 16/10; }
+    .story .photo{ order:-1; aspect-ratio: 16/10; }
     .menu-grid{ grid-template-columns: 1fr; gap: 4px; }
     .ticket-inner{ padding: 8px 22px 30px; }
     .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
-    .gallery-grid .ph.tall{ grid-row: span 1; aspect-ratio: 1/1; }
+    .gallery-grid .photo.tall{ grid-row: span 1; aspect-ratio: 1/1; }
     .location-grid{ grid-template-columns: 1fr; }
     .contact-grid{ grid-template-columns: 1fr; }
   }
@@ -383,7 +387,7 @@
 
 <section id="story">
   <div class="wrap story">
-    <img class="photo" src="storefront.jpg" alt="Wood-fired oven at Pizza's and More">
+    <img class="photo" src="storefront.jpg" alt="Pizza's and More storefront and kitchen">
     <div>
       <span class="eyebrow-line" style="justify-content:flex-start;">Our Story</span>
       <h2>A Small Kitchen, Making One Thing Well</h2>
@@ -454,12 +458,12 @@
       <p>Drop your own photos into these frames — fresh pies, the oven, and the counter work best.</p>
     </div>
     <div class="gallery-grid">
-      <img class="photo" src="food1.jpg" alt="Wood-fired oven at Pizza's and More">
-      <img class="photo" src="food2.jpg" alt="Wood-fired oven at Pizza's and More">
-      <img class="photo" src="food3.jpg" alt="Wood-fired oven at Pizza's and More">
-      <img class="photo" src="venue1.jpg" alt="Wood-fired oven at Pizza's and More">
-      <img class="photo" src="venue2.jpg" alt="Wood-fired oven at Pizza's and More">
-      <img class="photo" src="venue3.jpg" alt="Wood-fired oven at Pizza's and More">
+      <img class="photo tall" src="food1.jpg" alt="Fresh pizza out of the oven">
+      <img class="photo" src="food2.jpg" alt="Pizza slice close-up">
+      <img class="photo" src="food3.jpg" alt="Sides and starters">
+      <img class="photo" src="venue1.jpg" alt="Inside the kitchen">
+      <img class="photo" src="venue2.jpg" alt="Dining counter">
+      <img class="photo" src="venue3.jpg" alt="Storefront exterior">
     </div>
   </div>
 </section>
