@@ -112,6 +112,10 @@
   #mobile-menu a{ font-size: 1rem; text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; }
   #mobile-menu.open{ display:flex; }
 
+  @media (min-width: 861px){
+    #mobile-menu.open{ display: none; }
+  }
+
   /* ---------- hero ---------- */
   .hero{
     padding: 76px 24px 90px;
@@ -555,6 +559,12 @@
       mobileMenu.classList.remove('open');
       burgerBtn.setAttribute('aria-expanded', 'false');
     });
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860 && mobileMenu.classList.contains('open')) {
+      mobileMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    }
   });
 </script>
 
